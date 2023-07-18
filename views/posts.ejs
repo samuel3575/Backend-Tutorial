@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posts</title>
+</head>
+<body>
+    <h1>My Blog</h1>
+    <a href="/create-post">Create a Post</a>
+
+    <h2>Latest Posts</h2>
+    <div style="max-width: 82ch;">
+        <% for(let i = 0; i <posts.length; i++) { %>
+        <h3><%= posts[i].title %></h3>
+        <p style="display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;"><%= posts[i].text %></p>
+        <a href="/<%= posts[i].titleForm %>">Read More</a>
+        <hr>
+        <% } %>
+    </div>
+    
+</body>
+</html>
